@@ -6,7 +6,8 @@ function getDataMeteo($city)
   // $context = stream_context_create($opts);
 
   $url = "https://www.prevision-meteo.ch/services/xml/" . $city;
-  $xml = file_get_contents($url, false, $context);
+  // $xml = file_get_contents($url, false, $context);
+  $xml = file_get_contents($url, false);
   $data = simplexml_load_string($xml);
 
   return $data->channel;

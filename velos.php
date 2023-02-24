@@ -1,6 +1,6 @@
 <?php
-require 'velos/assets/function/api/MeteoApi.php';
-require 'velos/assets/widget/MeteoWidget.php';
+require 'assets/function/api/MeteoApi.php';
+require 'assets/widget/MeteoWidget.php';
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ require 'velos/assets/widget/MeteoWidget.php';
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Intéropérabilité - Projet n°1</title>
-  <link rel="stylesheet" href="velos/style.css">
+  <link rel="stylesheet" href="style.css">
 
   <!-- Leaflet -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
@@ -31,10 +31,10 @@ require 'velos/assets/widget/MeteoWidget.php';
 
   <h2>Liste des sources API</h2>
   <ul>
-    <li><b>La météo : </b><a href="https://www.prevision-meteo.ch/services" target="_blank">Prevision-Meteo</a></li>
-    <li><b>IP de l'utilisateur : </b><a href="https://ip-api.com/docs/api:xml" target="_blank">ip-api</a></li>
-    <li><b>Vélo de Nancy : </b><a href="https://developer.jcdecaux.com/#/opendata/vls?page=dynamic" target="_blank">JCDecaux</a> (Le seul qui n'est pas en XML)</li>
-    <li><b>Localisation de l'IUT Charlemagne : </b><a href="https://apidocs.geoapify.com/#docs" target="_blank">Geoapify</a></li>
+    <li><b>La météo de Nancy: </b><a href="https://www.prevision-meteo.ch/services/xml/Nancy" target="_blank">Prevision-Meteo</a></li>
+    <li><b>IP de l'utilisateur : </b><a href="https://ipapi.co/xml/" target="_blank">ipapi</a></li>
+    <li><b>Vélo de Nancy : </b><a href="https://api.jcdecaux.com/vls/v1/stations?contract=Nancy&apiKey=f4084b85c3bb949e1d9feaba810dabc4f10b88e4" target="_blank">JCDecaux</a> (Le seul qui n'est pas en XML)</li>
+    <li><b>Localisation de l'IUT Charlemagne : </b><a href="https://api.geoapify.com/v1/geocode/search?text=IUT%20Nancy-Charlemagne,%20Nancy,%20France&format=xml&apiKey=cccb99b51ef64365a4e70e1c13e9fb00" target="_blank">Geoapify</a></li>
   </ul>
 
   <h2>Outil utilisé</h2>
@@ -43,7 +43,7 @@ require 'velos/assets/widget/MeteoWidget.php';
   </ul>
 
   <!-- Own Script -->
-  <script src="velos/js/app.js" type="module"></script>
+  <script src="js/app.js" type="module"></script>
 </body>
 
 </html>
