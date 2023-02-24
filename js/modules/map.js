@@ -20,7 +20,7 @@ async function init() {
 }
 
 async function _searchUserByIP(ip = "") {
-	var url = "http://ip-api.com/xml/" + ip;
+	var url = "https://ipapi.co/xml/" + ip;
 
 	const response = await fetch(url);
 	const data = await response.text();
@@ -29,15 +29,13 @@ async function _searchUserByIP(ip = "") {
 		const parser = new DOMParser();
 		const xml = parser.parseFromString(data, "text/xml");
 
-		if (xml.querySelector("status").textContent == "success") {
-			return {
-				city: xml.querySelector("city").textContent,
-				region: xml.querySelector("regionName").textContent,
-				country: xml.querySelector("country").textContent,
-				lat: xml.querySelector("lat").textContent,
-				lon: xml.querySelector("lon").textContent,
-			};
-		}
+		return {
+			city: xml.querySelector("city").textContent,
+			region: xml.querySelector("region").textContent,
+			country: xml.querySelector("country").textContent,
+			lat: xml.querySelector("latitude").textContent,
+			lon: xml.querySelector("longitude").textContent,
+		};
 	}
 }
 
