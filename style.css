@@ -1,0 +1,43 @@
+.meteo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+
+	width: fit-content;
+	padding: 0.5rem 1rem;
+
+	border-radius: 1rem;
+	border: 1px solid black;
+}
+
+.meteo .title {
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
+.meteo .temperature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.meteo .temperature img {
+	width: 3rem;
+	height: 3rem;
+}
+
+.meteo .temperature p {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.meteo p {
+	margin: 0;
+}
+
+.meteo a {
+	color: #588484;
+}
