@@ -10,8 +10,7 @@ function widgetMeteo($meteo)
     </div>
     <p>{$meteo->condition}</p>
     <div>
-      <a href="{$meteo->link}" target="_blank" >Plus d'infos</a> | 
-      <a href="https://www.prevision-meteo.ch/services/xml/nancy" target="_blank">Requête api</a>
+      <a href="{$meteo->link}" target="_blank" >Plus d'infos</a>
     </div>
   </div>
   HTML;
